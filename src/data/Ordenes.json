@@ -24,5 +24,142 @@
         "cantidad": 3
       }
     ]
+  },
+  {
+    "id": 3,
+    "cliente": "Fulano Pérez",
+    "fecha": "2025-04-10T20:30:00Z",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "cliente": "María López",
+    "items": [
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
   }
 ]
