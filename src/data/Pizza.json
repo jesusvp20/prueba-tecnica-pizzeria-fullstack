@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nombre": "Siciliana",
+    "precio": 25000,
+    "ingredientes": ["jamón", "queso", "champiñones"]
+  },
+  {
+    "id": 2,
+    "nombre": "Pepperoni",
+    "precio": 22000,
+    "ingredientes": ["queso", "pepperoni"]
+  }
+]
