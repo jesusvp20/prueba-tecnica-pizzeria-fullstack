@@ -11,3 +11,8 @@ Datos en memoria: JSON files
 ## Estado
 
 ⚙️ En progreso
+
+
+
+🧪 Pruebas en Postman
+Puedes importar el archivo postman/Pizzeria_API_Collection.json para probar los endpoints desde Postman.
