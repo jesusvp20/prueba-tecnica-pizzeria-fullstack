@@ -8,6 +8,8 @@ Backend: Node.js, Express, Jest
 Frontend:React, Axios, Jest
 Datos en memoria: JSON files
 
+##estructura del proyecto backend
+
 ## Estado
 
 ⚙️ En progreso
