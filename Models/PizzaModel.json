@@ -1,0 +1,10 @@
+{
+  "Pizzas": [{
+    "nombre": "Siciliana",
+    "precio": 25000,
+    "ingredientes": ["jamón", "queso", "champiñones"]
+  }]
+
+
+
+}
