@@ -1,0 +1,10 @@
+.mensaje-exito {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: #1e3a1e;
+    color: #d4fcd4; 
+    font-weight: 500;
+    border: 1px solid #2e7d32;
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.3);
+  }

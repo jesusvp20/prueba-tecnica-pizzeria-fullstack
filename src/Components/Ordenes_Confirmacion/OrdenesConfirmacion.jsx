@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
 import { createOrder, getPizzas } from "../../Services/Api";
+import SelectPizzas from "../PizzasSelectComponent/SelectPizzas";
+import InputCliente from "../InputCliente/InputCliente";
+import InputCantidad from "../InputCantidadComponent/InputCantidad";
+import MensajeConfirmacion from "../MensajeComponent/MensajeConfirm";
+import ResumenPedido from "../ResumenPedidoComponent/ResumenPedido";
+
+import "./OrdenesConfirmacion.css";
 
 function OrdenesConfirmacion() {
   const [pizzas, setPizzas] = useState([]);
@@ -9,7 +16,6 @@ function OrdenesConfirmacion() {
   const [mensajeConfirmacion, setMensajeConfirmacion] = useState("");
 
   useEffect(() => {
-    //listamos las pizzas
     const fetchPizzas = async () => {
       try {
         const data = await getPizzas();
@@ -19,7 +25,7 @@ function OrdenesConfirmacion() {
       }
     };
     fetchPizzas();
-  }, [])
+  }, []);
 
   const handleConfirmarOrden = async () => {
     if (!pizzaSeleccionada || !clienteSeleccionado || !cantidad) {
@@ -33,107 +39,83 @@ function OrdenesConfirmacion() {
         items: [
           {
             pizzaId: parseInt(pizzaSeleccionada),
-            cantidad: parseInt(cantidad)
-          }
-        ]
-      }
-     //creamos la confirmacion del pedido
+            cantidad: parseInt(cantidad),
+          },
+        ],
+      };
+
       const response = await createOrder(orderData);
-      setMensajeConfirmacion(`Éxito: ${response.message} - Orden #${response.orderSummary.id} a nombre de ${response.orderSummary.cliente}.`);
-      
-      // Resetear formulario
+      setMensajeConfirmacion(
+        `Éxito: ${response.message} - Orden #${response.orderSummary.id} a nombre de ${response.orderSummary.cliente}.`
+      );
       setPizzaSeleccionada("");
       setClienteSeleccionado("");
       setCantidad(1);
-      
     } catch (error) {
       console.error("Error al confirmar la orden:", error);
       setMensajeConfirmacion("Error: No se pudo crear la orden");
     }
-  }
+  };
 
-  const pizzaSeleccionadaData = pizzas.find(p => p.id === parseInt(pizzaSeleccionada));
+  const pizzaSeleccionadaData = pizzas.find(
+    (p) => p.id === parseInt(pizzaSeleccionada)
+  );
 
   return (
-    <div>
-      <h2>Confirmar Orden</h2>
-
-      {/* Selector de pizza */}
-      <label>Selecciona una pizza:</label>
-      <select
-        value={pizzaSeleccionada}
-        onChange={(e) => setPizzaSeleccionada(e.target.value)}
-      >
-        <option value="">-- Pizza --</option>
-        {pizzas.map((pizza) => (
-          <option key={pizza.id} value={pizza.id}>
-            {pizza.nombre} - ${pizza.precio}
-          </option>
-        ))}
-      </select>
-
-      {/* Campo para nombre del cliente */}
-      <label style={{ marginLeft: "10px" }}>Cliente:</label>
-      <input
-        type="text"
-        value={clienteSeleccionado}
-        onChange={(e) => setClienteSeleccionado(e.target.value)}
-        placeholder="Nombre del cliente"
-        style={{ marginLeft: "5px", width: "150px" }}
-      />
-
-      {/* Selector de cantidad */}
-      <label style={{ marginLeft: "10px" }}>Cantidad:</label>
-      <input
-        type="number"
-        min="1"
-        max="10"
-        value={cantidad}
-        onChange={(e) => setCantidad(e.target.value)}
-        style={{ 
-          marginLeft: "5px",
-          width: "60px",
-          padding: "3px",
-          textAlign: "center"
-        }}
-      />
-
-      {/* Resumen del pedido */}
-      {pizzaSeleccionadaData && clienteSeleccionado && (
-        <div style={{ margin: "15px 0", padding: "10px", border: "1px solid #ddd" }}>
-          <strong>Resumen del pedido:</strong><br />
-          {cantidad} x {pizzaSeleccionadaData.nombre} para {clienteSeleccionado}
+    <div className="ordenes-confirmacion-container container">
+      <h2 className="text-center">Confirmar Orden</h2>
+      
+      {/* Fila para inputs y resumen */}
+      <div className="row g-3">
+        
+        {/* Columna con inputs */}
+        <div className="col-md-6">
+          <div className="mb-3">
+            <label className="form-label">Selecciona tu Pizza</label>
+            <SelectPizzas
+              pizzas={pizzas}
+              value={pizzaSeleccionada}
+              onChange={setPizzaSeleccionada}
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Nombre del Cliente</label>
+            <InputCliente
+              value={clienteSeleccionado}
+              onChange={setClienteSeleccionado}
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Cantidad</label>
+            <InputCantidad value={cantidad} onChange={setCantidad} />
+          </div>
         </div>
-      )}
 
-      <button 
-        onClick={handleConfirmarOrden}
-        style={{ 
-          marginLeft: "10px", 
-          padding: "5px 15px",
-          backgroundColor: "#007bff",
-          color: "white",
-          border: "none",
-          borderRadius: "4px",
-          cursor: "pointer"
-        }}
-      >
+        {/* Columna con el resumen del pedido */}
+        <div className="col-md-6">
+        <label className="form-label">Resumen del pedido </label>
+          <div className="resumen-pedido-card">
+         
+            <ResumenPedido
+              pizza={pizzaSeleccionadaData}
+              cliente={clienteSeleccionado}
+              cantidad={cantidad}
+            />
+          </div>
+        </div>
+      </div>
+
+      <button className="btn btn-confirmar w-100" onClick={handleConfirmarOrden}>
         Confirmar Orden
       </button>
 
       {mensajeConfirmacion && (
-        <div style={{ 
-          marginTop: "20px", 
-          color: mensajeConfirmacion.startsWith("Éxito") ? "green" : "red",
-          padding: "10px",
-          border: "1px solid #ddd",
-          borderRadius: "4px"
-        }}>
-          {mensajeConfirmacion}
+        <div className="mensaje-confirmacion">
+          <MensajeConfirmacion mensaje={mensajeConfirmacion} />
         </div>
       )}
     </div>
-  )
+  );
 }
 
 export default OrdenesConfirmacion;
