@@ -1,0 +1,41 @@
+/* App.css */
+:root {
+    --amarillo: #ffc107;
+    --gris-oscuro: #1a1a1a;
+  }
+  
+  body {
+    background-color: #121212;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .bg-gray-800 {
+    background-color: var(--gris-oscuro) !important;
+  }
+  
+  .border-warning {
+    border: 1px solid rgba(255, 193, 7, 0.25) !important;
+  }
+  
+  .custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(255, 193, 7, 0.15);
+  }
+  
+  .text-muted {
+    color: #6c757d !important;
+  }
+  
+  h1, h2, h3 {
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
