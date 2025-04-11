@@ -150,34 +150,36 @@
   },
   {
     "id": 12,
-    "cliente": "Carlos Pérez",
+    "cliente": "jesus",
     "items": [
       {
-        "pizzaId": 1,
-        "cantidad": 2
-      },
-      {
         "pizzaId": 2,
-        "cantidad": 1
+        "cantidad": 5
       }
     ]
   },
   {
     "id": 13,
-    "cliente": "Carlos Pérez",
+    "cliente": "jesus",
     "items": [
       {
         "pizzaId": 1,
-        "cantidad": 2
-      },
-      {
-        "pizzaId": 2,
         "cantidad": 1
       }
     ]
   },
   {
     "id": 14,
+    "cliente": "jesus",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 15,
     "cliente": "Carlos Pérez",
     "items": [
       {
@@ -191,7 +193,187 @@
     ]
   },
   {
-    "id": 15,
+    "id": 16,
+    "cliente": "andrea ",
+    "items": [
+      {
+        "pizzaId": 4,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "cliente": "dddd",
+    "items": [
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "cliente": "andrea",
+    "items": [
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "cliente": "s",
+    "items": [
+      {
+        "pizzaId": 2,
+        "cantidad": 2
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "cliente": "11",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 3
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "cliente": "jesus ",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "cliente": "jesus",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 4
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "cliente": "jesus",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 4
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "cliente": "dd",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "cliente": "jesus david",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "cliente": "Carlos Pérez",
+    "items": [
+      {
+        "pizzaId": 1,
+        "cantidad": 2
+      },
+      {
+        "pizzaId": 2,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "cliente": "jesus david ",
+    "items": [
+      {
+        "pizzaId": 2,
+        "cantidad": 10
+      }
+    ]
+  },
+  {
+    "id": 32,
     "cliente": "Carlos Pérez",
     "items": [
       {

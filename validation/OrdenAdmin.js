@@ -12,19 +12,25 @@ export const orderValidationRules = [
     .notEmpty().withMessage('El cliente es requerido')
     .isString().withMessage('El cliente debe ser una cadena de texto'),
 
-  // Validar campo 'items' (requerido, array no vacío)
-  body('items')
+   // Validar campo 'items' (requerido, array no vacío)
+    body('items')
     .notEmpty().withMessage('Los items son requeridos')
     .isArray().withMessage('Los items deben ser un array')
     .custom(items => items.length >= 1).withMessage('Debe haber al menos un ítem en la orden'),
 
-  // Validar cada pizzaId: debe ser entero, positivo y existir en Pizza.json
-  body('items.*.pizzaId')
+   // Validar cada pizzaId: debe ser entero, positivo y existir en Pizza.json
+    body('items.*.pizzaId')
     .isInt({ min: 1 }).withMessage('El pizzaId debe ser un número entero válido')
     .custom((pizzaId) => {
       const pizzas = readData("./src/data/Pizza.json");
       return pizzas.some(pizza => pizza.id === pizzaId);
     }).withMessage('La pizza seleccionada no existe'),
+
+   // Validar cantidad  máximo 10 ordenes 
+   body('items.*.cantidad')
+   .isInt({ min: 1 }).withMessage('La cantidad debe ser al menos 1')
+   .custom(cantidad => cantidad <= 10).withMessage('La cantidad máxima por pizza es 10'),
+
 
   // Validar cantidad: entero positivo
   body('items.*.cantidad')
