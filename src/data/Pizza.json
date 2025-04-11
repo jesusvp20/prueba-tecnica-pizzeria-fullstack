@@ -8,7 +8,19 @@
   {
     "id": 2,
     "nombre": "Pepperoni",
-    "precio": 22000,
+    "precio": 24000,
     "ingredientes": ["queso", "pepperoni"]
+  },
+  {
+    "id": 3,
+    "nombre": "Jamon y queso",
+    "precio": 18000,
+    "ingredientes": ["pepperoni", "queso", "jamon"]
+  },
+  {
+    "id": 4,
+    "nombre": "Hawaiana",
+    "precio": 23000,
+    "ingredientes": ["queso", "jamón", "piña"]
   }
 ]

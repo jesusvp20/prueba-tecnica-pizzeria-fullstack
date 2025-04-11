@@ -19,4 +19,4 @@ export const writeData = (filePath, data) => {
   } catch (error) {
     console.error("Error al escribir el archivo:", error);
   }
-};
+}

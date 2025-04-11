@@ -2,22 +2,23 @@
 import express from 'express';
 import { orderValidationRules, validateOrder } from '../validation/OrdenAdmin.js';
 import { readData, writeData } from '../utils/DataUtils.js';
+import cors from 'cors'
 
-const app = express();
-
-app.use(express.json());
+const app = express()
+app.use(cors())
+app.use(express.json())
 
 // Ruta para listar pizzas
 app.get('/api/pizzas', (req, res) => {
   const data = readData("./src/data/Pizza.json"); 
   res.json(data);
-});
+})
 
 //Ruta para listar ordenes
 app.get('/api/orders', (req, res) => {
   const data = readData("./src/data/Ordenes.json");
   res.json(data);
-});
+})
 
 //Busqueda de ordenes por id
 app.get('/api/orders/:id', (req, res) => {
@@ -37,8 +38,8 @@ app.get('/api/orders/:id', (req, res) => {
       cantidad: item.cantidad,
       precioUnitario: pizza ? pizza.precio : 0,
       subtotal: pizza ? pizza.precio * item.cantidad : 0
-    };
-  });
+    }
+  })
 
   const respuesta = {
     id: order.id,
@@ -47,7 +48,7 @@ app.get('/api/orders/:id', (req, res) => {
   };
 
   res.json(respuesta);
-});
+})
 
 // Endpoint POST para crear  nueva orden
 app.post('/api/orders', orderValidationRules, validateOrder, (req, res) => {
@@ -56,7 +57,7 @@ app.post('/api/orders', orderValidationRules, validateOrder, (req, res) => {
     id: orders.length + 1,
     cliente: req.body.cliente,
     items: req.body.items  // Sin fecha
-  };
+  }
 
   orders.push(newOrder);
   writeData("./src/data/Ordenes.json", orders); 
@@ -64,6 +65,6 @@ app.post('/api/orders', orderValidationRules, validateOrder, (req, res) => {
   res.status(201).json({
     message: "Tu orden ha sido confirmada.",
     orderSummary: newOrder
-  });
-});
+  })
+})
 export default app;

@@ -23,14 +23,14 @@ describe('API Pizzeria', () => {
     expect(response.body).toHaveProperty('id', 1);
     expect(response.body).toHaveProperty('cliente');
     expect(response.body).toHaveProperty('items');
-  });
+  })
 
 
   test('GET /api/orders/:id con un ID inexistente debería devolver 404', async () => {
     const response = await request(app).get('/api/orders/9999'); 
     expect(response.status).toBe(404);
     expect(response.body).toHaveProperty('message', 'Orden no encontrada');
-  });
+  })
 
   test('POST /api/orders debería crear una orden y devolver un 201', async () => {
     const newOrder = {
@@ -51,7 +51,7 @@ describe('API Pizzeria', () => {
         expect.objectContaining({ pizzaId: 1, cantidad: 2 }),
         expect.objectContaining({ pizzaId: 2, cantidad: 1 })
       ])
-    }));
+    }))
     
     expect(response.body.orderSummary).not.toHaveProperty('fecha');
   });
@@ -59,13 +59,13 @@ describe('API Pizzeria', () => {
 test('POST sin cliente devuelve error', async () => {
   const response = await request(app)
     .post('/api/orders')
-    .send({ items: [{ pizzaId: 1, cantidad: 2 }] });
+    .send({ items: [{ pizzaId: 1, cantidad: 2 }] })
 
-  expect(response.status).toBe(400);
+  expect(response.status).toBe(400)
   expect(response.body).toEqual({
     message: 'El cliente es requerido' // Mensaje actualizado
-  });
-});
+  })
+})
 
 test('POST /api/orders con datos incompletos debería devolver un 400', async () => {
   const invalidOrder = {
