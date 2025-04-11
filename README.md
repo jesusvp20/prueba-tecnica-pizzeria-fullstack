@@ -1,12 +1,23 @@
-# React + Vite
+Prueba Técnica Fullstack
+Servicio API REST con cliente React — Prueba técnica Fullstack Pizzería
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tecnologías
+Backend: Node.js, Express, Jest Frontend:React, Axios, Jest Datos en memoria: JSON files
 
-Currently, two official plugins are available:
+#estructura del proyecto el backend está ubicado en la rama main El frontend se encuentra ubicado en la rama desarrollo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##caracteristicas## Pruebas unitarias con jest validaciones con express Js validaciones en el frontend interfaz fácil de entender y amigable
 
-## Expanding the ESLint configuration
+Estado
+##estado del proyecto
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Finalizado
+
+Clonar repo
+git clone
+
+Backend
+cd carpeta backend npm install npm run dev
+
+Frontend
+cd carpeta frontend npm install npm start
