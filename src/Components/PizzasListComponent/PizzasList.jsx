@@ -1,4 +1,3 @@
-// src/components/PizzaList.jsx
 import { useState, useEffect } from 'react';
 import { getPizzas } from '../../Services/Api';
 
@@ -13,10 +12,10 @@ function PizzaList() {
       } catch (error) {
         console.error("Error al obtener las pizzas:", error);
       }
-    };
+    }
 
     fetchPizzas();
-  }, []);
+  }, [])
 
   return (
     <div className="container mt-4">
@@ -35,7 +34,7 @@ function PizzaList() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export default PizzaList;
