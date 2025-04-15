@@ -23,7 +23,7 @@ interfaz fácil de entender y amigable
 
 Finalizado
 
-##Como Usar el proyecto 
+#Como Usar el proyecto 
 # Clonar repo
 git clone <URL>
 
