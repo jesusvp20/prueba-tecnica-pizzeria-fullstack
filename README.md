@@ -1,23 +1,38 @@
-Prueba Técnica Fullstack
+# Prueba Técnica Fullstack
+
 Servicio API REST con cliente React — Prueba técnica Fullstack Pizzería
 
-Tecnologías
-Backend: Node.js, Express, Jest Frontend:React, Axios, Jest Datos en memoria: JSON files
+## Tecnologías
 
-#estructura del proyecto el backend está ubicado en la rama main El frontend se encuentra ubicado en la rama desarrollo
+Backend: Node.js, Express, Jest
+Frontend:React, Axios, Jest
+Datos en memoria: JSON files
 
-##caracteristicas## Pruebas unitarias con jest validaciones con express Js validaciones en el frontend interfaz fácil de entender y amigable
+#estructura del proyecto
+el backend está ubicado en la rama main 
+El frontend se encuentra ubicado en la rama desarrollo 
 
-Estado
+##caracteristicas##
+Pruebas unitarias con jest
+validaciones con express Js
+validaciones en el frontend
+interfaz fácil de entender y amigable 
+## Estado
+
 ##estado del proyecto
 
 Finalizado
 
-Clonar repo
-git clone
+# Clonar repo
+git clone <URL>
 
-Backend
-cd carpeta backend npm install npm run dev
+# Backend
+cd carpeta backend 
+npm install
+npm run dev
 
-Frontend
-cd carpeta frontend npm install npm start
+
+# Frontend
+cd carpeta frontend 
+npm install
+npm start
