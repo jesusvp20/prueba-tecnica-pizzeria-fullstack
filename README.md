@@ -22,7 +22,7 @@ interfaz fácil de entender y amigable
 
 Finalizado
 
-## COMO USAR EL PROYECTP 
+## COMO USAR EL PROYECTo
 
 # Clonar repo
 git clone <URL>
