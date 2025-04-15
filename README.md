@@ -17,7 +17,6 @@ Pruebas unitarias con jest
 validaciones con express Js
 validaciones en el frontend
 interfaz fácil de entender y amigable 
-## Estado
 
 ##estado del proyecto
 
